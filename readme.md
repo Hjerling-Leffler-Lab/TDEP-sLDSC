@@ -1,6 +1,6 @@
 
 # How to generate LDscores for custom annotation
-This codechunk assumes you have run the (R script)[R/00.create_bedfiles.R] to generate bedfiles
+This codechunk assumes you have run the [R script](R/00.create_bedfiles.R) to generate bedfiles
 
 ```{bash}
 # pwd is project root. Getting ldscores for one cell-type
