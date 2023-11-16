@@ -32,5 +32,3 @@ done
 workflow/results/s-ldsc
 #workflow/sumstats/scsz2022_eur.sumstats.gz
 sh scripts/s-ldsc.sh data/scz2022_eur.sumstats.gz workflow/ldscores/amygdala_excitatory
-
-```
