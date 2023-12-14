@@ -1,0 +1,32 @@
+Supercluster_ID	X1	X2	cluster	Supercluster	Neuron	Neuron_type	Top_regions	Nota_bene
+amygdala_excitatory	-3.96994899491188	-2.76338210030313	3	Amygdala excitatory	TRUE	excitatory	Amygdala (0.57), Cerebral cortex (0.36), Hippocampus (0.05), Hypothalamus (0.02)	TRUE
+astrocyte	13.1020790503603	-10.1755202759038	1	Astrocyte	FALSE	-	Cerebral cortex (0.26), Hippocampus (0.18), Basal forebrain (0.11), Midbrain (0.08), Thalamus (0.06), Pons (0.05), Amygdala (0.04), Cerebellum (0.04), Medulla (0.03), Hypothalamus (0.02)	FALSE
+bergmann_glia	13.3957101190404	-10.4927081377737	1	Bergmann glia	FALSE	-	Cerebellum (0.96), Medulla (0.02), Pons (0.02)	FALSE
+cerebellar_inhibitory	-7.51653515990955	13.6244474316128	2	Cerebellar inhibitory	TRUE	inhibitory	Cerebellum (0.81), Pons (0.11), Medulla (0.05)	FALSE
+cge_interneuron	-9.53273340493219	13.2344589718446	2	CGE interneuron	TRUE	inhibitory	Cerebral cortex (0.72), Hippocampus (0.12), Amygdala (0.1)	TRUE
+choroid_plexus	12.9132735645605	-9.66900468073625	1	Choroid plexus	FALSE	-	Basal forebrain (0.8), Medulla (0.19)	FALSE
+committed_oligodendrocyte_precursor	12.8603490195701	-10.8879487919307	1	Committed oligodendrocyte precursor	FALSE	-	Thalamus (0.26), Cerebral cortex (0.12), Amygdala (0.1), Hippocampus (0.09), Hypothalamus (0.08), Basal forebrain (0.06), Pons (0.02)	FALSE
+deep_layer_corticothalamic_and_6b	-4.55570242518031	-3.47018372458702	3	Deep-layer corticothalamic and 6b	TRUE	excitatory	Cerebral cortex (0.75), Hippocampus (0.15), Amygdala (0.05), Basal forebrain (0.03)	FALSE
+deep_layer_intratelencephalic	-4.48154789933311	-3.80576666821845	3	Deep-layer intratelencephalic	TRUE	excitatory	Cerebral cortex (0.84), Amygdala (0.07), Basal forebrain (0.06)	TRUE
+deep_layer_near_projecting	-4.27419141655973	-3.5319995640749	3	Deep-layer near-projecting	TRUE	excitatory	Cerebral cortex (0.92), Basal forebrain (0.04)	FALSE
+eccentric_medium_spiny_neuron	-3.62041617901457	-1.9616332548153	3	Eccentric medium spiny neuron	TRUE	inhibitory	Amygdala (0.44), Basal forebrain (0.33), Cerebral cortex (0.07), Hypothalamus (0.05), Thalamus (0.02)	TRUE
+ependymal	13.3580147042281	-9.91683512096501	1	Ependymal	FALSE	-	Hippocampus (0.31), Basal forebrain (0.16), Medulla (0.15), Amygdala (0.07), Thalamus (0.06), Pons (0.05), Hypothalamus (0.02), Spinalcord (0.02)	FALSE
+fibroblast	12.9407196564359	-9.30267707016097	1	Fibroblast	FALSE	-	Thalamus (0.27), Cerebral cortex (0.11), Pons (0.11), Basal forebrain (0.08), Medulla (0.03)	FALSE
+hippocampal_ca1_3	-4.41521061557925	-2.41858388848643	3	Hippocampal CA1-3	TRUE	excitatory	Hippocampus (0.98)	TRUE
+hippocampal_ca4	-4.61196530900636	-2.52352167119682	3	Hippocampal CA4	TRUE	excitatory	Hippocampus (0.99)	TRUE
+hippocampal_dentate_gyrus	-4.10115944606094	-2.21746553451056	3	Hippocampal dentate gyrus	TRUE	excitatory	Hippocampus (0.99)	FALSE
+lamp5_lhx6_and_chandelier	-9.83756924449513	13.0219937810197	2	LAMP5-LHX6 and Chandelier	TRUE	inhibitory	Cerebral cortex (0.6), Hippocampus (0.17), Amygdala (0.14), Basal forebrain (0.02)	TRUE
+lower_rhombic_lip	-7.69859336036166	13.0521613208605	2	Lower rhombic lip	TRUE	excitatory	Pons (0.93), Medulla (0.05), Basal forebrain (0.02)	FALSE
+mammillary_body	-8.33971059009621	12.9076107204652	2	Mammillary body	TRUE	excitatory	Hypothalamus (1)	FALSE
+medium_spiny_neuron	-3.35581196635779	-1.73058598947329	3	Medium spiny neuron	TRUE	inhibitory	Basal forebrain (0.73), Amygdala (0.15), Cerebral cortex (0.04), Hypothalamus (0.03)	FALSE
+mge_interneuron	-9.44213351774184	13.1639415065492	2	MGE interneuron	TRUE	inhibitory	Cerebral cortex (0.85), Hippocampus (0.08), Amygdala (0.03), Basal forebrain (0.02)	FALSE
+microglia	12.5619561759443	-9.15862265958484	1	Microglia	FALSE	-	Basal forebrain (0.2), Midbrain (0.14), Cerebral cortex (0.12), Hippocampus (0.09), Pons (0.05), Thalamus (0.03)	FALSE
+midbrain_derived_inhibitory	-9.04975807844846	13.1415281379151	2	Midbrain-derived inhibitory	TRUE	inhibitory	Thalamus (0.72), Midbrain (0.23), Pons (0.02)	FALSE
+miscellaneous	-4.01900300102326	-3.65068794535786	3	Miscellaneous	TRUE	excitatory	Cerebral cortex (0.46), Hippocampus (0.29), Midbrain (0.06), Amygdala (0.03), Basal forebrain (0.03), Pons (0.02)	FALSE
+oligodendrocyte	13.058773779258	-10.7842281060961	1	Oligodendrocyte	FALSE	-	Thalamus (0.14), Midbrain (0.13), Cerebral cortex (0.12), Pons (0.09), Basal forebrain (0.04), Hippocampus (0.04), Medulla (0.02)	FALSE
+oligodendrocyte_precursor	13.4192325542368	-11.0155893524665	1	Oligodendrocyte precursor	FALSE	-	Cerebral cortex (0.24), Hippocampus (0.15), Midbrain (0.11), Pons (0.11), Thalamus (0.09), Amygdala (0.05)	FALSE
+splatter	-7.98429096953259	13.2228423982574	2	Splatter	TRUE	multiple	Midbrain (0.28), Hypothalamus (0.23), Pons (0.11), Thalamus (0.09), Medulla (0.08), Basal forebrain (0.07), Amygdala (0.06), Spinalcord (0.02)	FALSE
+thalamic_excitatory	-8.46678629843417	13.1289021314371	2	Thalamic excitatory	TRUE	excitatory	Thalamus (0.96), Midbrain (0.04)	FALSE
+upper_layer_intratelencephalic	-3.84553662502001	-3.44507143578164	3	Upper-layer intratelencephalic	TRUE	excitatory	Cerebral cortex (0.96)	TRUE
+upper_rhombic_lip	-7.18800821928669	13.3894428003177	2	Upper rhombic lip	TRUE	excitatory	Cerebellum (0.65), Pons (0.14), Medulla (0.13)	FALSE
+vascular	12.6965040976514	-8.96531322785615	1	Vascular	FALSE	-	Thalamus (0.2), Cerebral cortex (0.16), Hippocampus (0.08), Basal forebrain (0.04), Pons (0.03), Medulla (0.02)	FALSE

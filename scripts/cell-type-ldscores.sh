@@ -1,7 +1,6 @@
 
-# author: Arvid Harder, code modified from Shuyang Yao and Lu Yi
+
 # dependencies: assumes slurm and ldsc are installed available through module load
-# TODO: incorporate container
 # Wraps compute_chrom_ldscores.sh that compues ldscores per chromosome
 
 

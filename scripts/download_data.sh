@@ -1,5 +1,5 @@
 # download linnarson scRNA data, aggregated by cluster-level cell-type
-mkdir -p workflow/reference_data
+mkdir -p workflow/reference_data workflow/figures
 wget -O workflow/reference_data/adult_human_20221007.agg.loom https://storage.googleapis.com/linnarsson-lab-human/adult_human_20221007.agg.loom
 
 

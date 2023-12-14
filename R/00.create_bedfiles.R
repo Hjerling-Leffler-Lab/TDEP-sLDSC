@@ -12,7 +12,7 @@ gene_expr <- read_tsv(here("workflow/reference_data/adult_human_20221007.agg.tsv
 valid_genes  <- read_tsv(here("data/valid_genes.tsv.gz"))
 
 # from: https://github.com/linnarsson-lab/adult-human-brain
-clusters_to_superclusters <- readxl::read_xlsx(here("data/Table_S2_cluster.xlsx")) |> 
+clusters_to_superclusters <- readxl::read_xlsx(here("data/siletti_table_s2.xlsx")) |> 
     select(superclusters = 2, cluster = 1) |> 
     drop_na()
 
