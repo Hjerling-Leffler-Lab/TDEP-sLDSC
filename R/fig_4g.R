@@ -168,8 +168,6 @@ p3a <- ggplot(df.p2, aes(x="",y=prop_supercluster, fill=reorder(Class, -sc.order
         axis.ticks = element_blank()) +
   labs(title="Exc. and Inh.\n")
 
-p1a | p2a | p3a
-
 pdf(file = here("workflow/figures/4g_amygdala.pdf"),
     width = 20,
     height = 6,
