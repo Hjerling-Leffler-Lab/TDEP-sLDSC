@@ -1,42 +1,50 @@
-# = shuyang yao (20230125)
-# = bar chart for top 10 Clusters for scz2022
-# length of bar = -log10(P)
-# proportion of bar: proportion in top 3 regions.
-
-#--- script starts ---#
+# filename: fig_2c.R
+# Fig2C_Supercluster_MDDsubtypes.R
 
 library(data.table)
 library(tidyverse)
 library(ggplot2)
 library(scico)
+library(rcartocolor)
+library(readxl)
 library(here)
+source(here("R/order_data.R"))
 
-# read in SCZ cluster level results
-df <- read_xlsx(here("data/supplemental-tables.xlsx"), sheet = "TableS8") |> 
-  filter(Phenotype == "scz2022") |> 
-  slice_min(P,  n = 25)
+dat <- fread(here("data/PlotDF_Supercluster_MDD.tsv")) %>%
+  filter(!Trait %in% c("early_onset_nordic", "early_onset_nordic_without_ukb"))
 
+### keep only traits for main plot ###
 
-ggplot(
-  df,
-  aes(
-    x = reorder(Cluster, -P.fdr),
-    y = -log10(P),
-    fill = -log10(P)
-  )
-) +
-  geom_bar(stat = "identity") +
-  coord_flip() +
-  xlab("") +
-  ylab(expression("-log"[10] * "(P)")) +
-  labs(title = "Top Clusters (scz2022)") +
-  theme_light() +
-  theme(axis.title.x = element_text(hjust = 0)) +
-  scico::scale_fill_scico(palette = "lajolla", midpoint = 5, direction = -1) +
-  guides(fill = "none")
+dat1 <- dat %>% 
+  filter(MDD_group %in% c("Reference", "Impair","Recurrence","Suicidality","PPD"))
+dat1$Supercluster <- factor(dat1$Supercluster,
+                            levels=rev(order_ct))
+
+dat1$Trait2 <- factor(dat1$Trait2, levels=order_traits_mdd2)
 
 
-ggsave(
-  file = "workflow/figures/2c.pdf",
-  width = 5, height = 6
-)
+p1a <- ggplot(dat1, aes(Trait2, Supercluster)) + 
+  geom_point(aes(fill = minuslog10P, size = if.sig.fdr, color=if.sig.fdr), alpha = .85, shape = 21) +
+  theme(panel.background = element_rect(fill = "transparent"),
+        axis.text.x=element_text(angle = 30, hjust=1),
+        legend.key = element_rect(fill = "transparent"))+
+  scico::scale_fill_scico(palette = "lajolla", midpoint=5, name=expression('-log'[10]*'(P)'))+
+  scale_size_manual(values = c(1.5,4.5), name="Sig.(FDR)")+
+  scale_color_manual(values=c("lightgrey","black"), name="Sig.") + 
+  guides(color="none", fill="none", size="none") + 
+  ylab("") + xlab("") +
+  facet_grid(~fct_relevel(MDD_group,
+                          "Reference",
+                          "Recurrence",
+                          "Impair",
+                          "Suicidality",
+                          "PPD"), 
+             scales = "free_x", 
+             space = "free_x") 
+p1a
+ggsave(p1a,
+       file=here("workflow/figures/2c_MDDsubtypes.pdf"),
+       width=6.5, height = 7, dpi=300)
+
+#--- end ---#
+

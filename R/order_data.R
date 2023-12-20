@@ -1,3 +1,42 @@
+order_final_traits <- c(
+  "scz2022",
+  "bip2021",
+  "mdd2019",
+  "adhd2023",
+  "problematic_alcohol_use2023",
+  "educational_attainment",
+  "iq",
+  "neuroticism",
+  "insomnia",
+  "suicide_attempt",
+  "suicide_death",
+  "alcohol_drinks_per_week",
+  "smoking_cigarettes_per_day",
+  "smoking_initiation",
+  "alzheimers_disease",
+  "parkinson2019",
+  "stroke",
+  "amyotrophic_lateral_sclerosis",
+  "multiple_sclerosis",
+  "epilepsy",
+  "migraine",
+  "hearing_loss",
+  "cortical_surface_area",
+  "cortical_thickness",
+  "volume_accumbens",
+  "volume_amygdala",
+  "volume_brainstem",
+  "volume_caudate",
+  "volume_pallidum",
+  "volume_putamen",
+  "volume_thalamus",
+  "height",
+  "bmi",
+  "cbc_hematocrit",
+  "cbc_lymphocyte",
+  "cbc_neutrophil"
+)
+
 order_ct <- c(
   "Upper-layer intratelencephalic",
   "Deep-layer intratelencephalic",
@@ -32,10 +71,25 @@ order_ct <- c(
   "Vascular"
 )
 
+# for conditional analysis plot:
+order_ct2 <- c("Upper-layer intratelencephalic",
+              "Deep-layer intratelencephalic",
+              "Deep-layer corticothalamic and 6b",
+              "Hippocampal CA1-3",
+              "Hippocampal CA4",
+              "Hippocampal dentate gyrus",
+              "Amygdala excitatory",
+              "Thalamic excitatory",
+              "MGE interneuron",
+              "CGE interneuron",
+              "LAMP5-LHX6 and Chandelier",
+              "Medium spiny neuron",
+              "Eccentric medium spiny neuron",
+              "Cerebellar inhibitory",
+              "Miscellaneous"
+)
 
-
-
-order_traits_1b = c(
+order_traits_mdd = c(
   "mdd2019 (170.8k)",
   "bip2021_type1 (25.1k)",
   "bip2021_type2 (6.8k)",
@@ -58,7 +112,7 @@ order_traits_1b = c(
   "mdd_ect (2.7k)"
 )
 
-order_traits_1b_2=c(
+order_traits_mdd2=c(
   "mdd2019 (170.8k)",
   "bip2021_type1 (25.1k)",
   "bip2021_type2 (6.8k)",
@@ -71,3 +125,74 @@ order_traits_1b_2=c(
   "without_suicidal_thought (37.1k)",
   "mdd_ppd (17.3k)"
 )
+
+#- for 4a heatmap:
+order_regions <- c(
+  "FrCx",
+  "LimCx",
+  "ParCx",
+  "TempCx",
+  "OccCx",
+  "PalCx",
+  "HC",
+  "Amyg",
+  "BasFB",
+  "Thal",
+  "HTH",
+  "CBL",
+  "MidB",
+  "Pons",
+  "Medul",
+  "SC"
+)
+# order of cell types (Superclusters), short name
+order_ct3 <- c("UL-IT",
+              "DL-IT",
+              "DL-NP",
+              "DL-CT",
+              "CA1-3",
+              "CA4",
+              "HiDG",
+              "AmygExc",
+              "ThalExc",
+              "MGE-IN",
+              "CGE-IN",
+              "LLC-IN",
+              "MSN",
+              "eMSN",
+              "Splatter",
+              "MBIn",
+              "Mam",
+              "L RombLip",
+              "U RombLip",
+              "CerIn",
+              "Misc",
+              "Astr",
+              "B",
+              "CPlx",
+              "COP",
+              "Epend",
+              "Fibr",
+              "MiG",
+              "OPC",
+              "Olig",
+              "Vasc")
+
+#- for 4b
+order_regions2 <- c("Frontal_cortex",
+                    "Limbic_cortex",
+                    "Parietal_cortex",
+                    "Temporal_cortex",
+                    "Occipital_cortex",
+                    "Paleo_cortex",
+                    "Hippocampus",
+                    "Amygdala",
+                    "BasalForebrain",
+                    "Thalamus",
+                    "HTH",
+                    "Cerebellum",
+                    "Midbrain",
+                    "Pons",
+                    "Medulla",
+                    "SpinalCord")
+order_regions2 <- gsub("_", "\n", order_regions2)
