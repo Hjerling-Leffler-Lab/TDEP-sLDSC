@@ -6,7 +6,7 @@ library(tidyverse)
 library(rrvgo)
 
 #- read in GSA results
-dat <- fread(here("data/gsa_cluster_SCZtop25.tsv"))
+dat <- fread(here("workflow/gsa_cluster_SCZtop25.tsv.gz"))
 
 #- get score from enrichment
 scores.top25 <- setNames(-log10(dat$P.fdr.group), dat$ID)
