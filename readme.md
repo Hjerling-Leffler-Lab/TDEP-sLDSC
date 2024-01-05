@@ -58,22 +58,3 @@ To run S-LDSC, input GWAS summary statistics in the LDSC [munged](https://github
 sh scripts/s-ldsc.sh workflow/sumstats/bmi2018.sumstats.gz workflow/amygdala_excitatory
 ```
 
-# Todo for SY: Main figures
-
--   
-
--   Figure 1c: script for figure 1c (subtypes - not same as on drive)
-
--   Figure 1D: script for how data for figure 1d was derived (ridge plot)
-
--   Figure 2a & 2c: missing data script, figure script and data
-
--   Figure 4: ABC, data, scripts and figure scripts
-
--   Figure 5: ABC, data, scripts and figure scripts
-
-# Supplementary:
-
--   for Pat: Need code for supplementary figures 3,4 (how did u generate input data?)
-
--   Shuyang: Figure S7 Figure S8, data, code to get data, code to get figure
