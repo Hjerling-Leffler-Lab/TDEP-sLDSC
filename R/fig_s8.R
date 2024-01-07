@@ -5,9 +5,10 @@ library(data.table)
 library(tidyverse)
 library(ggplot2)
 library(here)
+library(readxl)
 
 #- panel A. model AUC
-df.mod <- fread(here("data/dfS8a.modAUC.tsv"))
+df.mod <- read_xlsx(here("data/supplemental-tables.xlsx"), sheet = "TableS12")
 
 p1 <- ggplot(df.mod,
              aes(x=Run,y=AUC, color=as.character(fold), 
@@ -91,7 +92,9 @@ heatmap(as.matrix(mymx), scale="none")
 dev.off()
 
 #- panel F. density plot
-FImx_long_AUCweighted_sumFolds <- fread(here("data/dfS8f.Edge_strength.tsv"))
+#FImx_long_AUCweighted_sumFolds <- fread(here("data/dfS8f.Edge_strength.tsv"))
+FImx_long_AUCweighted_sumFolds <- read_xlsx(here("data/supplemental-tables.xlsx"), sheet = "TableS13")
+
 mythreshold=quantile(FImx_long_AUCweighted_sumFolds$FI_edges_scaled_AUCweighted_sum_normalized_sum,0.995)
 p5 <- ggplot(data=FImx_long_AUCweighted_sumFolds,
              aes(x=FI_edges_scaled_AUCweighted_sum_normalized_sum))+
