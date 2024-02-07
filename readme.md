@@ -30,7 +30,7 @@ Rscript R/00.create_bedfiles.R
 
 ## Stratified LDscore regression
 
-To replicate our results you can either download the precomputed LDscores here (TBD), or relcalculate them yourself.
+To replicate our results you can either download the precomputed LDscores [here](https://zenodo.org/records/10628706), or relcalculate them yourself.
 
 Here we calculate ldscores for the 31 superclusters + 461 clusters. The example code uses slurm and the lmod system torun LDSC. \
 Edit to fit your own computational environment.
