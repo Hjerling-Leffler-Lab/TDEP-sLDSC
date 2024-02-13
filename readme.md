@@ -1,3 +1,9 @@
+# Introduction
+
+This github repostiory contains the analytical code for our [preprint](https://www.medrxiv.org/content/10.1101/2024.01.18.24301478v1): 
+"Connecting genomic results for psychiatric disorders to human brain cell types and regions reveals convergence with functional connectivity".
+
+
 # Calculating enrichment of heritability in cell-types
 
 First we need to download the scRNA data from Siletti et al, and to download reference files for stratified LDScore regression
