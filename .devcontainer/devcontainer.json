@@ -1,14 +1,15 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/rocker-org/devcontainer-templates/tree/main/src/r-ver
 {
-	"name": "R (rocker/r-ver base)",
+	"name": "R-tidyverse",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "ghcr.io/rocker-org/devcontainer/r-ver:4.3",
+	"image": "ghcr.io/rocker-org/devcontainer/tidyverse:4.3",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-			"packages": "tidyverse,data.table,here,rstatix,skimr,ggrepel,umap,dbscan,ggExtra,ggcorrplot,scico,ggridges,viridis,hrbrthemes"
+			"packages": "data.table,here,skimr,ggrepel,umap,dbscan,ggExtra,ggcorrplot,scico,ggridges,viridis",
+			"installSystemRequirements": true
 		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
 	}
