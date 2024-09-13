@@ -66,6 +66,6 @@ processed %>%
   guides(color="none", fill="none", size="none") 
 
 
-ggsave(here("workflow/figures/2b_conditional_supercluster_SCZ.pdf"), width=6, height =5.8)
+# ggsave(here("workflow/figures/2b_conditional_supercluster_SCZ.pdf"), width=6, height =5.8)
 
 #--- end ---#

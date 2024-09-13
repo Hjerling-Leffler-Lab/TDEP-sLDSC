@@ -64,13 +64,13 @@ p1 <- ggplot(dat2 %>% filter(label%in%dat1$Trait),
 
 
 #- output
-ggsave(p,
-       filename = here("workflow/figures/2a_bubble.pdf"),
-       width = 16, 
-       height = 7.5)
-ggsave(p1 + theme(axis.text.x=element_blank()),
-       filename = here("workflow/figures/2a_bar.pdf"),
-       width = 16, 
-       height = 1.5)
+# ggsave(p,
+#        filename = here("workflow/figures/2a_bubble.pdf"),
+#        width = 16, 
+#        height = 7.5)
+# ggsave(p1 + theme(axis.text.x=element_blank()),
+#        filename = here("workflow/figures/2a_bar.pdf"),
+#        width = 16, 
+#        height = 1.5)
 
 #--- end ---#
