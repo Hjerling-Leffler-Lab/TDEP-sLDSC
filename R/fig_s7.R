@@ -1,41 +1,41 @@
-# fig_s7.R
-# Fig S7: BP (s7a) and MF (s7b) of the GO terms of the top 10% specifically expressed genes in the top 25 clusters
-
 library(data.table)
-library(tidyverse)
-library(rrvgo)
+library(here)
+library(ggplot2)
 
-#- read in GSA results
-dat <- fread(here("workflow/gsa_cluster_SCZtop25.tsv.gz"))
+sc_data <- read_tsv(here("data/supercluster_data.tsv"))
+# to get colors
+hue_pal()(5)
+colors <- c(
+  "Original" = "black", 
+  "bip2021" = "#F8766D",
+  "educational_attainment" = "#A3A500",
+  "iq" = "#00BF7D",
+  "mdd2019" = "#00B0F6",
+  "neuroticism" = "#E76BF3"
+)
 
-#- get score from enrichment
-scores.top25 <- setNames(-log10(dat$P.fdr.group), dat$ID)
+original <- readxl::read_xlsx("supplemental-tables.xlsx", sheet = 6) |> 
+  filter(label == "scz2022") |> 
+  mutate(
+    gwa2 = "Original", 
+    sig = if_else(if.sig.fdr=="yes", "Yes", "No"),
+    Name = janitor::make_clean_names(Supercluster),
+  ) |> 
+  select(Coefficient_P_value = P, sig, gwa2, Name) |> 
+  filter(Name %in% sc_data$Name)
 
-#- get similarity matrix, for BP, CC, and MF separately
-simMatrix.top25.BP <- calculateSimMatrix(dat$ID,
-                                         orgdb="org.Hs.eg.db",
-                                         ont=c("BP"),
-                                         method="Rel")
-simMatrix.top25.MF <- calculateSimMatrix(dat$ID,
-                                         orgdb="org.Hs.eg.db",
-                                         ont=c("MF"),
-                                         method="Rel")
+bind_rows(sc_data, original) |> 
+  ggplot(aes(Name, -log10(Coefficient_P_value),alpha = sig, fill = gwa2 )) +
+  geom_col(position = position_dodge()) +
+  coord_flip() +
+  geom_hline(yintercept = -log10(0.05/31)) +
+  theme_light() +
+  labs(
+    # title = glue::glue("GWAS-by-subtraction with Scizophrenia as index trait")
+    fill = "Trait subtracted",
+    alpha = "FDR significant",
+    y = "-log10(P)"
+  ) +
+  scale_fill_manual(values = colors)
 
-# input of plots
-reducedTerms.top25.BP <- reduceSimMatrix(simMatrix.top25.BP,
-                                         scores.top25,
-                                         threshold=0.7,
-                                         orgdb="org.Hs.eg.db")
-reducedTerms.top25.MF <- reduceSimMatrix(simMatrix.top25.MF,
-                                         scores.top25,
-                                         threshold=0.7,
-                                         orgdb="org.Hs.eg.db")
-# plot
-pdf(file = here("workflow/figures/s7a_treeMapBP_SCZtop25.pdf"))
-treemapPlot(reducedTerms.top25.BP)
-dev.off()
-pdf(file = here("workflow/figures/s7b_treeMapMF_SCZtop25.pdf"))
-treemapPlot(reducedTerms.top25.MF)
-dev.off()
-
-#--- end ---# 
+ggsave("workflow/figures/supercluster_barplot.png", dpi = 300, height =7, width =10)

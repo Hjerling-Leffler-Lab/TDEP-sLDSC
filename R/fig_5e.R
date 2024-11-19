@@ -2,7 +2,7 @@ library(data.table)
 library(here)
 library(ggplot2)
 
-df <- fread(here("data/df.5cd_FI_AH1vs0.tsv"))
+df <- fread(here("data/df.5ef_FI_AH1vs0.tsv"))
 
 p1 <- ggplot(df %>% 
                arrange(-FI_edges_scaled_AUCweighted_sum_sum) %>% 
@@ -17,6 +17,6 @@ p1 <- ggplot(df %>%
   ylab("Feature importance per connection") +
   xlab("Connections (ranked by feature importance)")
 
-pdf(file=here("workflow/figures/5c_data1_FI_rank.pdf"), height = 3, width = 4)
+pdf(file=here("workflow/figures/5e_cobre_FI_rank.pdf"), height = 3, width = 4)
 p1
 dev.off()

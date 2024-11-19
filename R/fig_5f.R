@@ -2,7 +2,7 @@ library(data.table)
 library(here)
 library(ggplot2)
 
-df <- fread(here("data/df.5cd_FI_AH1vs0.tsv"))
+df <- fread(here("data/df.5ef_FI_AH1vs0.tsv"))
 
 p2 <- ggplot(df,
              aes(x=FI_edges_scaled_AUCweighted_sum_sum,
@@ -21,6 +21,6 @@ p2 <- ggplot(df,
            label=paste("p=",mytest$p.value,sep=""))
 p2
 
-pdf(file=here("workflow/figures/5d_data1_FI.pdf"), height = 3, width = 4)
+pdf(file=here("workflow/figures/5f_cobre_FI.pdf"), height = 3, width = 4)
 p2
 dev.off()
