@@ -10,7 +10,7 @@ library(readxl)
 library(here)
 source(here("R/order_data.R"))
 
-df2 <- read_xlsx(here("data/supplemental-tables.xlsx"), sheet = "TableS10") %>%
+df2 <- read_xlsx(here("data/Supplementary_Datasets.xlsx"), sheet = "Supplementary_Data_10") %>%
   rename(Trait=Phenotype, regions=Brain_region) %>%
   mutate(regions2=gsub("Paleocortex","Paleo_cortex",regions),
          regions2=gsub("_","\n",regions2),

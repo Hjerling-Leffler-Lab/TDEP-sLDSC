@@ -2,7 +2,7 @@ library(tidyverse)
 library(fs)
 library(googlesheets4)
 library(here)
-df <- read_sheet("https://docs.google.com/spreadsheets/d/13xrrUL0_0GdubNxm0Lod71CHemvzNLdUsVLG3xev9tk/edit#gid=0", sheet = "TableS3")
+df <- read_sheet("https://docs.google.com/spreadsheets/d/13xrrUL0_0GdubNxm0Lod71CHemvzNLdUsVLG3xev9tk/edit#gid=0", sheet = "Supplementary_Data_3")
 dir_ls(here("workflow")
 
 prev <- df |> filter(Supercluster == "Amygdala excitatory" & label == "bmi")

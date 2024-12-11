@@ -84,7 +84,7 @@ a <- fread(here("data/n_neurons_cluster_roi_region.tsv")) %>%
 
 
 #- 2. dataframe with scz significance
-df.scz <- read_excel(here("data/supplemental-tables.xlsx"), sheet="TableS8") %>%
+df.scz <- read_excel(here("data/Supplementary_Datasets.xlsx"), sheet="Supplementary_Data_8") %>%
   rename(Trait=Phenotype) %>%
   separate(col=Cluster,into=c("V1","Cluster0"),sep=" \\(", remove=F) %>%
   mutate(Cluster0=as.integer(gsub(")","",Cluster0))) %>%

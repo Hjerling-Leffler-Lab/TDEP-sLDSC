@@ -8,7 +8,7 @@ library(scico)
 library(here)
 
 # read in SCZ cluster level results
-df <- read_xlsx(here("data/supplemental-tables.xlsx"), sheet = "TableS8") |> 
+df <- read_xlsx(here("data/Supplementary_Datasets.xlsx"), sheet = "Supplementary_Data_8") |> 
   filter(Phenotype == "scz2022") |> 
   slice_min(P,  n = 25)
 

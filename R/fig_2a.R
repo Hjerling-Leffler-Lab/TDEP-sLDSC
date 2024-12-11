@@ -8,7 +8,7 @@ library(readxl)
 library(scico)
 source(here("R/order_data.R"))
 
-dat1 <- read_xlsx(here("data/supplemental-tables.xlsx"), sheet = "TableS3") %>%
+dat1 <- read_xlsx(here("data/Supplementary_Datasets.xlsx"), sheet = "Supplementary_Data_3") %>%
   rename(Trait=label)
 
 dat1$Supercluster <- factor(dat1$Supercluster, 
@@ -42,7 +42,7 @@ p <- ggplot(dat1,
   guides(size=guide_legend(override.aes=list(color=c("lightgrey","black")))) 
 
 #- bar plot
-dat2 <- read_xlsx(here("data/supplemental-tables.xlsx"),sheet = "TableS1") 
+dat2 <- read_xlsx(here("data/Supplementary_Datasets.xlsx"),sheet = "Supplementary_Data_1") 
 dat2$label = factor(dat2$label, 
                     levels=order_final_traits)
 p1 <- ggplot(dat2 %>% filter(label%in%dat1$Trait),
@@ -64,13 +64,13 @@ p1 <- ggplot(dat2 %>% filter(label%in%dat1$Trait),
 
 
 #- output
-# ggsave(p,
-#        filename = here("workflow/figures/2a_bubble.pdf"),
-#        width = 16, 
-#        height = 7.5)
-# ggsave(p1 + theme(axis.text.x=element_blank()),
-#        filename = here("workflow/figures/2a_bar.pdf"),
-#        width = 16, 
-#        height = 1.5)
+ggsave(p,
+       filename = here("workflow/figures/2a_bubble.pdf"),
+       width = 16, 
+       height = 7.5)
+ggsave(p1 + theme(axis.text.x=element_blank()),
+       filename = here("workflow/figures/2a_bar.pdf"),
+       width = 16, 
+       height = 1.5)
 
 #--- end ---#

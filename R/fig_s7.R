@@ -14,7 +14,7 @@ colors <- c(
   "neuroticism" = "#E76BF3"
 )
 
-original <- readxl::read_xlsx("supplemental-tables.xlsx", sheet = 6) |> 
+original <- readxl::read_xlsx("Supplementary_Datasets.xlsx", sheet = 6) |> 
   filter(label == "scz2022") |> 
   mutate(
     gwa2 = "Original", 

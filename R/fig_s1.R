@@ -8,8 +8,8 @@ library(rstatix)
 
 # read in data
 a <- read_xlsx(
-  here("data/supplemental-tables.xlsx"),
-  sheet = "TableS1"
+  here("data/Supplementary_Datasets.xlsx"),
+  sheet = "Supplementary_Data_1"
 ) %>%
   mutate(
     year = as.integer(year),

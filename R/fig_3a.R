@@ -40,7 +40,7 @@ dat <- dat %>%
 
 # 3. Get cluster ID for significant clusters of trait (schizophrenia)
 
-dat.cluster.res <- read_xlsx(here("data/supplemental-tables.xlsx"), sheet = "TableS8") %>%
+dat.cluster.res <- read_xlsx(here("data/Supplementary_Datasets.xlsx"), sheet = "Supplementary_Data_8") %>%
   filter(Phenotype=="scz2022") %>%
   separate(col=Cluster,into=c("V1","Cluster0"),sep=" \\(", remove=F) %>%
   mutate(Cluster0=as.character(gsub(")","",Cluster0)),

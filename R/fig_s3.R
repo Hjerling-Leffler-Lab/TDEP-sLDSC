@@ -20,7 +20,7 @@ a <- read_tsv(here("data/supercluster_gene_specificity.tsv.gz")) %>%
   select(ensgid, Supercluster_ID, tpm, spec, topDecile)
 
 
-b1 <- readxl::read_xlsx(here("data/supplemental-tables.xlsx"), sheet = "TableS2") %>%
+b1 <- readxl::read_xlsx(here("data/Supplementary_Datasets.xlsx"), sheet = "Supplementary_Data_2") %>%
   mutate(order = row_number()) %>%
   select(Supercluster, Supercluster_ID, Neuron, Neuron_type, order)
 
